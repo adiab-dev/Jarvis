@@ -1,0 +1,352 @@
+
+.orb-position {
+  position: fixed;
+  right: auto;
+  bottom: auto;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.orb-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background: rgba(5, 10, 26, 0.68);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.orb-button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  overflow: visible;
+  outline: none;
+  isolation: isolate;
+  transform-style: preserve-3d;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.orb-button:focus-visible {
+  outline: 2px solid rgba(0, 220, 255, 0.9);
+  outline-offset: 6px;
+}
+
+.orb-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+  transform-style: preserve-3d;
+}
+
+.orb-3d-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  overflow: visible;
+}
+
+.orb-ring {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+  will-change: transform;
+}
+
+.orb-ring-axis {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+  will-change: transform;
+}
+
+.orb-ring-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  overflow: visible;
+  pointer-events: none;
+  user-select: none;
+  filter: grayscale(0.82) saturate(0.45) brightness(0.78) drop-shadow(0 0 5px rgba(90, 105, 125, 0.18));
+  opacity: 0.76;
+  transition: filter 400ms ease, opacity 400ms ease;
+}
+
+.orb-button-active .orb-ring-image {
+  filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.55)) drop-shadow(0 0 22px rgba(0, 100, 255, 0.45));
+  opacity: 1;
+}
+
+.orb-button-hover .orb-ring-image {
+  filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.6)) drop-shadow(0 0 22px rgba(0, 100, 255, 0.5));
+  opacity: 1;
+}
+
+.orb-button-breathing .orb-ring-image {
+  filter: drop-shadow(0 0 12px rgba(0, 190, 255, 0.5)) drop-shadow(0 0 28px rgba(40, 80, 255, 0.3));
+  opacity: 1;
+}
+
+.orb-ring-middle {
+  inset: 5%;
+}
+
+.orb-ring-inner {
+  inset: 12%;
+}
+
+.orb-ring-decorative {
+  inset: 2%;
+}
+
+.orb-core {
+  position: absolute;
+  width: 39%;
+  height: 39%;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.orb-core-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  filter: grayscale(0.82) saturate(0.45) brightness(0.78) drop-shadow(0 0 8px rgba(0, 120, 220, 0.38));
+  opacity: 0.8;
+  transition: filter 400ms ease, opacity 400ms ease;
+}
+
+.orb-button-active .orb-core-image {
+  filter: drop-shadow(0 0 10px rgba(0, 160, 255, 0.65));
+  opacity: 1;
+}
+
+.orb-glow-audio {
+  position: absolute;
+  inset: 12%;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+.orb-glow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 165, 255, 0.2) 0%,
+    rgba(0, 105, 255, 0.1) 35%,
+    rgba(50, 45, 255, 0.04) 55%,
+    transparent 72%
+  );
+  filter: blur(12px);
+  opacity: 0.7;
+  pointer-events: none;
+  will-change: transform, opacity;
+  translate: 0 0 -4px;
+}
+
+.orb-close {
+  position: fixed;
+  z-index: 10002;
+  top: 20px;
+  right: 22px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  padding: 0 0 3px;
+  border: 1px solid rgba(110, 210, 255, 0.45);
+  border-radius: 50%;
+  background: rgba(8, 18, 40, 0.9);
+  color: #dffaff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(0, 145, 255, 0.25);
+  transition:
+    background 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.orb-context-dismiss {
+  position: fixed;
+  inset: 0;
+  z-index: 10010;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.orb-context-menu {
+  position: fixed;
+  z-index: 10011;
+  box-sizing: border-box;
+  width: 45px;
+  padding: 2px;
+  border: 1px solid rgba(110, 210, 255, 0.38);
+  border-radius: 10px;
+  background: rgba(14, 20, 31, 0.88);
+  color: #eefaff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.34), 0 0 18px rgba(0, 145, 255, 0.15);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.orb-context-menu button {
+  width: 100%;
+  padding: 6px 3px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.orb-context-menu button:hover,
+.orb-context-menu button:focus-visible {
+  outline: none;
+  background: rgba(0, 155, 255, 0.22);
+}
+
+.orb-mode-switch {
+  position: fixed;
+  z-index: 10001;
+  left: 24px;
+  bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(227, 242, 255, 0.58);
+  font-size: 12px;
+}
+
+.spotify-mini-player {
+  position: fixed;
+  z-index: 10003;
+  right: 22px;
+  bottom: 20px;
+  width: 154px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgba(85, 205, 150, 0.42);
+  border-radius: 15px;
+  color: #effff6;
+  background: rgba(8, 19, 24, 0.9);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), 0 0 20px rgba(30, 215, 96, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.spotify-mini-art {
+  width: 132px;
+  height: 132px;
+  border-radius: 9px;
+  object-fit: cover;
+  background: #13251c;
+}
+
+.spotify-mini-art-empty {
+  display: grid;
+  place-items: center;
+  color: #1ed760;
+  font-size: 44px;
+}
+
+.spotify-mini-track {
+  width: 100%;
+  overflow: hidden;
+  color: rgba(239, 255, 246, 0.82);
+  font-size: 11px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.spotify-mini-controls { display: flex; align-items: center; gap: 12px; }
+.spotify-mini-controls button {
+  width: 30px;
+  height: 28px;
+  border: 0;
+  border-radius: 8px;
+  color: #e9fff1;
+  background: transparent;
+  cursor: pointer;
+}
+.spotify-mini-controls button:hover { background: rgba(30, 215, 96, 0.2); }
+.spotify-mini-controls button:nth-child(2) { color: #1ed760; font-size: 17px; }
+.spotify-mini-error { max-width: 100%; color: #ffb4a9; font-size: 10px; text-align: center; }
+
+.orb-mode-switch button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border: 1px solid rgba(146, 207, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(11, 24, 44, 0.75);
+  color: #eaf8ff;
+  cursor: pointer;
+}
+
+.orb-mode-switch kbd {
+  color: rgba(204, 225, 244, 0.48);
+  font: inherit;
+  font-size: 10px;
+}
+
+.orb-close:hover {
+  background: rgba(15, 45, 80, 0.98);
+  box-shadow: 0 0 24px rgba(0, 200, 255, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb-button,
+  .orb-glow,
+  .orb-close {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .orb-mode-switch button { transition-duration: 0.01ms !important; }
+}

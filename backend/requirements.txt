@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+ollama
+soundfile
+pocket-tts
+google-api-python-client
+google-auth-oauthlib
+websocket-client
+requests

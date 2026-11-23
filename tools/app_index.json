@@ -1,0 +1,179 @@
+{
+  "valorant": {
+    "path": "C:\\Riot Games\\Riot Client\\RiotClientServices.exe",
+    "args": [],
+    "process": "RiotClientServices.exe",
+    "aliases": [
+      "valorant",
+      "valo",
+      "riot",
+      "riotclient",
+      "riotgames"
+    ]
+  },
+
+  "discord": {
+    "path": "C:\\Users\\abdel\\AppData\\Local\\Discord\\Update.exe",
+    "args": [
+      "--processStart",
+      "Discord.exe"
+    ],
+    "process": "Discord.exe",
+    "aliases": [
+      "discord",
+      "disc",
+      "dc"
+    ]
+  },
+
+  "chrome": {
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "args": [],
+    "process": "chrome.exe",
+    "aliases": [
+      "chrome",
+      "googlechrome",
+      "browser",
+      "google"
+    ]
+  },
+
+  "vscode": {
+    "path": "C:\\Users\\abdel\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+    "args": [],
+    "process": "Code.exe",
+    "aliases": [
+      "vscode",
+      "vs",
+      "code",
+      "visualstudiocode",
+      "visualstudio",
+      "studio"
+    ]
+  },
+
+  "explorer": {
+    "path": "C:\\Windows\\explorer.exe",
+    "args": [],
+    "process": "explorer.exe",
+    "aliases": [
+      "explorer",
+      "fileexplorer",
+      "files",
+      "folders"
+    ]
+  },
+
+  "epicgames": {
+    "path": "C:\\Program Files (x86)\\Epic Games\\Launcher\\Portal\\Binaries\\Win64\\EpicGamesLauncher.exe",
+    "args": [],
+    "process": "EpicGamesLauncher.exe",
+    "aliases": [
+      "epic",
+      "epicgames",
+      "epicgameslauncher",
+      "fortnite",
+      "fn",
+      "rocketleague",
+      "rocket league",
+      "rocket",
+      "rl"
+    ]
+  },
+
+  "steam": {
+    "path": "C:\\Program Files (x86)\\Steam\\steam.exe",
+    "args": [],
+    "process": "steam.exe",
+    "aliases": [
+      "steam",
+      "steem",
+      "cs2",
+      "counter",
+      "counterstrike",
+      "counter-strike",
+      "ac",
+      "assassin'screed",
+      "assassinscreed",
+      "mirage",
+      "siege",
+      "r6",
+      "rainbowsixsiege",
+      "rainbowsix"
+    ]
+  },
+
+  "whatsapp": {
+    "path": "C:\\Users\\abdel\\AppData\\Local\\WhatsApp\\WhatsApp.exe",
+    "args": [],
+    "process": "WhatsApp.exe",
+    "aliases": [
+      "whatsapp",
+      "wa",
+      "watsapp",
+      "whatsap"
+    ]
+  },
+
+  "dockerdesktop": {
+    "path": "C:\\Program Files\\Docker\\Docker\\Docker Desktop.exe",
+    "args": [],
+    "process": "Docker Desktop.exe",
+    "aliases": [
+      "docker",
+      "dockerdesktop",
+      "dockr"
+    ]
+  },
+
+  "drawboardpdf": {
+    "path": "C:\\Program Files\\WindowsApps\\Drawboard.DrawboardPDF_*\\Drawboard PDF.exe",
+    "args": [],
+    "process": "Drawboard PDF.exe",
+    "aliases": [
+      "drawboard",
+      "drawboardpdf",
+      "pdf",
+      "draw"
+    ]
+  },
+
+  "cmd": {
+    "path": "C:\\Windows\\System32\\cmd.exe",
+    "args": [],
+    "process": "cmd.exe",
+    "aliases": [
+      "cmd",
+      "commandprompt",
+      "terminal",
+      "console"
+    ]
+  },
+
+  "powershell": {
+    "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "args": [],
+    "process": "powershell.exe",
+    "aliases": [
+      "powershell",
+      "ps",
+      "pwsh",
+      "power shell"
+    ]
+  },
+  
+  "spotify": {
+    "path": "C:\\Users\\abdel\\AppData\\Roaming\\Spotify\\Spotify.exe",
+    "args": [
+      "--remote-debugging-port=9227",
+      "--remote-allow-origins=*"
+    ],
+    "process": "Spotify.exe",
+    "aliases": [
+      "spotify",
+      "spot",
+      "music",
+      "mus"
+    ]
+  }
+}
