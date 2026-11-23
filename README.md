@@ -1,3 +1,6 @@
+# What is this project?
+Jarvis is kind of a pet project of mine. Its aim is to make client side automation easier and complex tasks within a chat prompt. This current project is a revamp of a previous less polished less optimised version of Jarvis built on electron created by me. This project has been created with the help of all kinds of AI software (Codex, Opencode, deepseek) so I won't act like it was 100% coded by me. It is currently still in very early development, so don't expect the cleanest instructions or documentation yet
+
 # Tauri + React + Typescript
 
 This template should help get you started developing with Tauri, React and Typescript in Vite.
